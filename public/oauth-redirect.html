@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OAuth Redirect - Neurotype</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .container {
+            text-align: center;
+            padding: 2rem;
+        }
+        .spinner {
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top: 3px solid white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .error {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="spinner"></div>
+        <p>Redirecting to Neurotype app...</p>
+        <div id="error" class="error" style="display: none;"></div>
+    </div>
+
+    <script>
+        (function() {
+            function getParameterByName(name, url) {
+                if (!url) url = window.location.href;
+                name = name.replace(/[\[\]]/g, '\\$&');
+                const regex = new RegExp('[?&#]' + name + '(=([^&#]*)|&|#|$)');
+                const results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, ' '));
+            }
+
+            function redirectToApp(idToken) {
+                if (!idToken) {
+                    showError('No id_token found in URL');
+                    return;
+                }
+
+                // Construct the deep link URL
+                const deepLinkUrl = `neurotype://oauth-callback?id_token=${encodeURIComponent(idToken)}`;
+                
+                // Try to redirect
+                try {
+                    window.location.href = deepLinkUrl;
+                    
+                    // Fallback: if redirect doesn't work after a short delay, show instructions
+                    setTimeout(function() {
+                        showError('Unable to open Neurotype app. Please make sure the app is installed.');
+                    }, 2000);
+                } catch (error) {
+                    showError('Error redirecting to app: ' + error.message);
+                }
+            }
+
+            function showError(message) {
+                const errorDiv = document.getElementById('error');
+                errorDiv.textContent = message;
+                errorDiv.style.display = 'block';
+                document.querySelector('.spinner').style.display = 'none';
+            }
+
+            // Extract id_token from query params or hash
+            let idToken = getParameterByName('id_token');
+            
+            // If not in query params, check hash fragment (common in OAuth flows)
+            if (!idToken) {
+                const hash = window.location.hash.substring(1);
+                const hashParams = new URLSearchParams(hash);
+                idToken = hashParams.get('id_token');
+            }
+
+            // If still not found, check for access_token and try to use that
+            if (!idToken) {
+                idToken = getParameterByName('access_token');
+            }
+
+            // Attempt redirect
+            if (idToken) {
+                redirectToApp(idToken);
+            } else {
+                showError('No authentication token found in URL. Please try logging in again.');
+            }
+        })();
+    </script>
+</body>
+</html>
+

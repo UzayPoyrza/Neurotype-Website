@@ -1,0 +1,20 @@
+{
+  "rewrites": [
+    {
+      "source": "/oauth-redirect",
+      "destination": "/oauth-redirect.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/oauth-redirect",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        }
+      ]
+    }
+  ]
+}
+
