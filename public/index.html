@@ -209,6 +209,10 @@
             color: var(--text-muted);
         }
         
+        .footer-links a:hover {
+            color: var(--text-primary);
+        }
+        
         /* Responsive */
         @media (max-width: 768px) {
             nav {
@@ -235,6 +239,11 @@
             
             .features-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 0.5rem;
             }
         }
     </style>
@@ -297,6 +306,11 @@
         <div class="footer-content">
             <p>&copy; 2024 Neurotype. All rights reserved.</p>
             <p style="margin-top: 0.5rem;">Download the Neurotype app to begin your journey</p>
+            <div class="footer-links" style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 1.5rem;">
+                <a href="/terms-of-service.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.3s ease;">Terms of Service</a>
+                <a href="/privacy-policy.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.3s ease;">Privacy Policy</a>
+                <a href="/consumer-health-data-privacy-policy.html" style="color: var(--text-secondary); text-decoration: none; transition: color 0.3s ease;">Consumer Health Data Privacy Policy</a>
+            </div>
         </div>
     </footer>
 </body>
