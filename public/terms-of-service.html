@@ -1,304 +1,576 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Terms of Service for Neurotype">
-    <title>Terms of Service - Neurotype</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --text-primary: #ffffff;
-            --text-secondary: rgba(255, 255, 255, 0.9);
-            --text-muted: rgba(255, 255, 255, 0.7);
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: var(--primary-gradient);
-            color: var(--text-primary);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        
-        /* Navigation */
-        nav {
-            padding: 1.5rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            text-decoration: none;
-            color: var(--text-primary);
-        }
-        
-        .logo-icon {
-            font-size: 2rem;
-        }
-        
-        /* Content Container */
-        .content-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            margin-top: 2rem;
-            margin-bottom: 4rem;
-        }
-        
-        h1 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 800;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-        
-        .last-updated {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-bottom: 2rem;
-        }
-        
-        h2 {
-            font-size: clamp(1.5rem, 3vw, 2rem);
-            font-weight: 700;
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-        }
-        
-        h3 {
-            font-size: clamp(1.2rem, 2vw, 1.5rem);
-            font-weight: 600;
-            margin-top: 1.5rem;
-            margin-bottom: 0.75rem;
-            color: var(--text-secondary);
-        }
-        
-        p {
-            margin-bottom: 1rem;
-            color: var(--text-secondary);
-            line-height: 1.8;
-        }
-        
-        ul, ol {
-            margin-left: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--text-secondary);
-        }
-        
-        li {
-            margin-bottom: 0.5rem;
-            line-height: 1.8;
-        }
-        
-        /* Footer */
-        footer {
-            padding: 3rem 2rem;
-            text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            margin-top: 4rem;
-        }
-        
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            color: var(--text-muted);
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-        }
-        
-        .footer-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-links a:hover {
-            color: var(--text-primary);
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            nav {
-                padding: 1rem;
-            }
-            
-            .content-container {
-                padding: 1.5rem;
-                margin: 1rem;
-                border-radius: 15px;
-            }
-            
-            h1 {
-                font-size: 1.75rem;
-            }
-            
-            h2 {
-                font-size: 1.5rem;
-            }
-            
-            h3 {
-                font-size: 1.2rem;
-            }
-            
-            .footer-links {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Terms of Service for Neurotype">
+  <title>Neurotype Terms of Service</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    :root {
+      --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --text-primary: #ffffff;
+      --text-secondary: rgba(255, 255, 255, 0.9);
+      --text-muted: rgba(255, 255, 255, 0.7);
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: var(--primary-gradient);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+    
+    /* Navigation */
+    nav {
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+    
+    .logo-icon {
+      font-size: 2rem;
+    }
+    
+    /* Content Container */
+    .content-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+    }
+    
+    h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+      color: var(--text-primary);
+    }
+    
+    .meta {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+      line-height: 1.25;
+    }
+    
+    h3 {
+      font-size: clamp(1.2rem, 2vw, 1.5rem);
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: var(--text-secondary);
+      line-height: 1.25;
+    }
+    
+    p {
+      margin-bottom: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      font-size: clamp(0.95rem, 1.5vw, 1rem);
+    }
+    
+    ul, ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+    
+    li {
+      margin-bottom: 0.5rem;
+      line-height: 1.8;
+      font-size: clamp(0.95rem, 1.5vw, 1rem);
+    }
+    
+    .callout {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 1.25rem 1.5rem;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      margin: 1.5rem 0;
+      backdrop-filter: blur(5px);
+    }
+    
+    .callout p {
+      margin-bottom: 0.75rem;
+    }
+    
+    .callout ul {
+      margin-top: 0.5rem;
+    }
+    
+    code {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+    
+    hr {
+      margin: 2rem 0;
+      border: none;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    a {
+      color: var(--text-primary);
+      text-decoration: underline;
+      transition: opacity 0.3s ease;
+    }
+    
+    a:hover {
+      opacity: 0.8;
+    }
+    
+    strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+    
+    /* Footer */
+    footer {
+      padding: 3rem 2rem;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 4rem;
+    }
+    
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      color: var(--text-muted);
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+    
+    .footer-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-links a:hover {
+      color: var(--text-primary);
+      text-decoration: underline;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        padding: 1rem;
+      }
+      
+      .content-container {
+        padding: 1.5rem;
+        margin: 1rem;
+        border-radius: 15px;
+        margin-top: 1rem;
+      }
+      
+      h1 {
+        font-size: 1.75rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+      }
+      
+      h3 {
+        font-size: 1.2rem;
+      }
+      
+      p, li {
+        font-size: 0.95rem;
+      }
+      
+      ul, ol {
+        margin-left: 1.25rem;
+      }
+      
+      .callout {
+        padding: 1rem;
+      }
+      
+      .footer-links {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      
+      .meta {
+        font-size: 0.85rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .content-container {
+        padding: 1.25rem;
+        margin: 0.75rem;
+      }
+      
+      h1 {
+        font-size: 1.5rem;
+      }
+      
+      h2 {
+        font-size: 1.3rem;
+      }
+      
+      h3 {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <a href="/" class="logo">
-            <span class="logo-icon">🧠</span>
-            <span>Neurotype</span>
-        </a>
-    </nav>
+  <nav>
+    <a href="/" class="logo">
+      <span class="logo-icon">🧠</span>
+      <span>Neurotype</span>
+    </a>
+  </nav>
 
-    <div class="content-container">
-        <h1>Terms of Service</h1>
-        <p class="last-updated">Last Updated: [Date]</p>
-        
-        <p>
-            Welcome to Neurotype. These Terms of Service ("Terms") govern your access to and use of 
-            the Neurotype website, mobile application, and services (collectively, the "Service") 
-            provided by Neurotype ("we," "us," or "our").
-        </p>
-        
-        <h2>1. Acceptance of Terms</h2>
-        <p>
-            By accessing or using our Service, you agree to be bound by these Terms. If you disagree 
-            with any part of these Terms, you may not access the Service.
-        </p>
-        
-        <h2>2. Description of Service</h2>
-        <p>
-            Neurotype provides cognitive assessment tools and personalized insights based on neuroscience 
-            research. Our Service helps users understand their cognitive profile and receive 
-            recommendations for optimizing their daily life.
-        </p>
-        
-        <h2>3. User Accounts</h2>
-        <p>
-            To access certain features of the Service, you may be required to create an account. 
-            You agree to:
-        </p>
-        <ul>
-            <li>Provide accurate, current, and complete information during registration</li>
-            <li>Maintain and update your account information to keep it accurate</li>
-            <li>Maintain the security of your account credentials</li>
-            <li>Accept responsibility for all activities that occur under your account</li>
-        </ul>
-        
-        <h2>4. Use of Service</h2>
-        <p>You agree to use the Service only for lawful purposes and in accordance with these Terms. 
-        You agree not to:</p>
-        <ul>
-            <li>Violate any applicable laws or regulations</li>
-            <li>Infringe upon the rights of others</li>
-            <li>Transmit any harmful, offensive, or inappropriate content</li>
-            <li>Attempt to gain unauthorized access to the Service or its systems</li>
-            <li>Interfere with or disrupt the Service or servers</li>
-            <li>Use automated systems to access the Service without permission</li>
-        </ul>
-        
-        <h2>5. Intellectual Property</h2>
-        <p>
-            The Service, including its original content, features, and functionality, is owned by 
-            Neurotype and is protected by international copyright, trademark, patent, trade secret, 
-            and other intellectual property laws.
-        </p>
-        
-        <h2>6. User Content</h2>
-        <p>
-            You retain ownership of any content you submit to the Service. By submitting content, 
-            you grant us a license to use, modify, and display such content as necessary to provide 
-            the Service.
-        </p>
-        
-        <h2>7. Privacy</h2>
-        <p>
-            Your use of the Service is also governed by our Privacy Policy and Consumer Health Data 
-            Privacy Policy. Please review these policies to understand how we collect and use your information.
-        </p>
-        
-        <h2>8. Medical Disclaimer</h2>
-        <p>
-            The Service is not intended to diagnose, treat, cure, or prevent any medical condition. 
-            The cognitive assessments and insights provided are for informational purposes only and 
-            should not be considered medical advice. Always consult with qualified healthcare 
-            professionals for medical concerns.
-        </p>
-        
-        <h2>9. Limitation of Liability</h2>
-        <p>
-            To the maximum extent permitted by law, Neurotype shall not be liable for any indirect, 
-            incidental, special, consequential, or punitive damages, or any loss of profits or revenues, 
-            whether incurred directly or indirectly, or any loss of data, use, goodwill, or other 
-            intangible losses resulting from your use of the Service.
-        </p>
-        
-        <h2>10. Termination</h2>
-        <p>
-            We may terminate or suspend your account and access to the Service immediately, without 
-            prior notice, for any breach of these Terms or for any other reason we deem necessary.
-        </p>
-        
-        <h2>11. Changes to Terms</h2>
-        <p>
-            We reserve the right to modify these Terms at any time. We will notify users of any 
-            material changes by updating the "Last Updated" date. Your continued use of the Service 
-            after such changes constitutes acceptance of the modified Terms.
-        </p>
-        
-        <h2>12. Governing Law</h2>
-        <p>
-            These Terms shall be governed by and construed in accordance with the laws of [Your 
-            Jurisdiction], without regard to its conflict of law provisions.
-        </p>
-        
-        <h2>13. Contact Information</h2>
-        <p>
-            If you have any questions about these Terms, please contact us at [Your Contact Email].
-        </p>
+  <div class="content-container">
+  <h1>Neurotype Terms of Service</h1>
+  <p class="meta"><strong>Effective Date:</strong> [Month Day, Year] &nbsp;&nbsp; <strong>Last Updated:</strong> [Month Day, Year]</p>
+
+  <p>
+    These Terms of Service (“<strong>Terms</strong>”) are a legally binding agreement between you (“<strong>you</strong>” or “<strong>User</strong>”)
+    and <strong>[Company Legal Name]</strong> (“<strong>Neurotype</strong>,” “<strong>Company</strong>,” “we,” “us,” or “our”)
+    governing your access to and use of the Neurotype mobile application, websites, and related services (collectively, the “<strong>Services</strong>”).
+  </p>
+
+  <div class="callout">
+    <p><strong>Important wellness & safety notice:</strong></p>
+    <ul>
+      <li>Neurotype provides wellness and educational content (e.g., meditation, mindfulness, breathing, sound, visualization, and gentle movement).</li>
+      <li><strong>Neurotype does not provide medical advice, diagnosis, or treatment</strong>, and does not replace a licensed healthcare provider.</li>
+      <li><strong>Not for emergencies.</strong> If you feel you may harm yourself or others, call your local emergency number or go to the nearest emergency facility.</li>
+      <li>Some practices may cause temporary discomfort or emotional activation. Stop if distressed and seek appropriate support.</li>
+    </ul>
+  </div>
+
+  <p>
+    By clicking “I Agree,” creating an account, downloading, accessing, or using the Services, you agree to these Terms.
+    If you do not agree, do not use the Services.
+  </p>
+
+  <h2>1) Definitions</h2>
+  <ul>
+    <li><strong>“Content”</strong> means all audio, text, visuals, guided sessions, prompts, routines, and materials made available through the Services, including personalized recommendations.</li>
+    <li><strong>“Subscription”</strong> means any paid plan (monthly, annual, or otherwise) for access to features or Content.</li>
+    <li><strong>“App Store Provider”</strong> means Apple Inc. and its affiliates (iOS) or Google LLC and its affiliates (Android), or other distribution platforms.</li>
+    <li><strong>“User Content”</strong> means information you submit to us directly, such as support requests, feedback, or ratings (Neurotype does not offer in-app journaling or community posting features).</li>
+  </ul>
+
+  <h2>2) Eligibility and Intended Use</h2>
+
+  <h3>2.1 Age</h3>
+  <p>
+    You must be at least <strong>[13/16/18]</strong> years old (or the minimum age required in your jurisdiction) to use the Services.
+    If you are under the age of majority where you live, you may use the Services only with a parent or legal guardian’s consent and supervision.
+  </p>
+
+  <h3>2.2 Emergency Use Prohibited</h3>
+  <p>
+    The Services are not designed for emergency use. If you believe you may be in danger or may harm yourself or others,
+    stop using the Services and seek immediate assistance by calling your local emergency number.
+  </p>
+
+  <h3>2.3 Not a Substitute for Professional Care</h3>
+  <p>
+    Neurotype provides general wellness and educational Content. It is not a substitute for professional medical, psychological,
+    psychiatric, or other healthcare services.
+  </p>
+
+  <h2>3) Changes to the Services or Terms</h2>
+  <p>
+    We may update the Services and these Terms from time to time. If we make material changes, we will provide notice as required by applicable law
+    (for example, via in-app notice or by updating the effective date). Continued use of the Services after changes become effective means you accept the updated Terms.
+  </p>
+
+  <h2>4) Account Registration and Security</h2>
+  <p>
+    You may need an account to access certain features. You agree to provide accurate information, maintain the confidentiality of your credentials,
+    and promptly notify us of any unauthorized access or use of your account. You are responsible for activity under your account to the extent permitted by law.
+  </p>
+
+  <h2>5) Health, Safety, and Medical Disclaimer</h2>
+
+  <h3>5.1 No Medical Advice</h3>
+  <p>
+    The Services and Content are provided for informational and educational purposes only.
+    <strong>Nothing in the Services is medical advice</strong> and nothing is intended to diagnose, treat, cure, or prevent any disease or mental health condition.
+  </p>
+
+  <h3>5.2 No Provider–Patient Relationship</h3>
+  <p>
+    Using the Services does not create a doctor–patient, therapist–client, or other professional healthcare relationship between you and Neurotype,
+    or between you and any Content contributors.
+  </p>
+
+  <h3>5.3 Individual Results Vary</h3>
+  <p>
+    Results vary. Some users may experience temporary discomfort, emotional activation, dizziness, or increased anxiety.
+    If you experience distress, discontinue the practice and seek professional support as needed.
+  </p>
+
+  <h3>5.4 Consult a Professional</h3>
+  <p>
+    If you have or suspect you may have a health condition, including a mental health condition; are pregnant; or have any condition that could be affected by breathing or movement practices,
+    consult a qualified professional before using the Services.
+  </p>
+
+  <h3>5.5 Assumption of Risk</h3>
+  <p>
+    To the maximum extent permitted by law, you voluntarily assume all risks associated with your use of the Services and Content,
+    including risk of injury, adverse reaction, or emotional distress.
+  </p>
+
+  <h2>6) License to Use the Services</h2>
+  <p>
+    Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to access and use the Services
+    for your personal, non-commercial use.
+  </p>
+
+  <h3>6.1 Restrictions</h3>
+  <p>You agree not to:</p>
+  <ul>
+    <li>Copy, modify, distribute, sell, or lease any part of the Services or Content, except as permitted by law.</li>
+    <li>Reverse engineer or attempt to extract source code except where allowed by law.</li>
+    <li>Use the Services to build a competing product or provide services to third parties.</li>
+    <li>Circumvent access controls or security measures.</li>
+  </ul>
+
+  <h2>7) Personalization and Recommendations</h2>
+  <p>
+    Neurotype may recommend sessions based on your preferences, goals, and usage patterns. Recommendations are for wellness support only and may be imperfect.
+    You are responsible for deciding whether and how to use any recommended Content.
+  </p>
+
+  <h2>8) Subscriptions, Billing, Free Trials, and Cancellations</h2>
+
+  <h3>8.1 Purchases Through App Stores</h3>
+  <p>
+    If you purchase a Subscription through an App Store Provider, billing and cancellation are handled by that provider, and their terms apply.
+    We may not be able to directly process refunds for App Store purchases.
+  </p>
+
+  <h3>8.2 Auto-Renewal</h3>
+  <p>
+    Unless canceled before renewal, Subscriptions may automatically renew at the then-current price as permitted by the platform and applicable law.
+  </p>
+
+  <h3>8.3 Free Trials (If Offered)</h3>
+  <p>
+    If a free trial is offered, it may convert to a paid Subscription unless canceled before the trial ends, as disclosed at sign-up.
+  </p>
+
+  <h3>8.4 Refunds</h3>
+  <p>
+    Except where required by law or platform policy, payments are non-refundable and we do not provide credits for partial periods.
+    App Store Providers may have their own refund rules that apply.
+  </p>
+
+  <h2>9) User Feedback</h2>
+  <p>
+    If you send feedback, suggestions, or support requests (“User Content”), you grant us a non-exclusive, worldwide, royalty-free license to use that feedback
+    to operate, improve, and develop the Services without compensation to you. Please do not include sensitive personal information in support messages.
+  </p>
+
+  <h2>10) Privacy</h2>
+  <p>
+    Our collection and use of personal information is described in our Privacy Policy:
+    <a href="/privacy-policy.html" rel="noopener">Privacy Policy</a>.
+  </p>
+
+  <h2>11) Intellectual Property</h2>
+  <p>
+    The Services and Content are owned by the Company or its licensors and are protected by applicable intellectual property laws.
+    “Neurotype” and related logos are trademarks of the Company. You may not use our trademarks without prior written permission.
+  </p>
+
+  <h2>12) Third-Party Services</h2>
+  <p>
+    The Services may rely on third-party services (for example, app stores, subscription management, analytics, hosting, or crash reporting).
+    We are not responsible for third-party services and your use of them may be governed by their terms and policies.
+  </p>
+
+  <h2>13) Prohibited Conduct</h2>
+  <p>You agree not to:</p>
+  <ul>
+    <li>Use the Services for unlawful purposes.</li>
+    <li>Interfere with or disrupt the Services or attempt unauthorized access.</li>
+    <li>Upload malware, harmful code, or attempt to bypass security measures.</li>
+    <li>Exploit the Services in a way that could harm others or encourage self-harm or violence.</li>
+  </ul>
+
+  <h2>14) Termination</h2>
+  <p>
+    You may stop using the Services at any time. We may suspend or terminate your access where permitted by law, including if you violate these Terms
+    or your use creates risk for the Company, other users, or third parties. Upon termination, the license granted to you ends.
+  </p>
+
+  <h2>15) Disclaimers (No Warranties)</h2>
+  <p>
+    TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE SERVICES AND CONTENT ARE PROVIDED “AS IS” AND “AS AVAILABLE.”
+    WE DISCLAIM ALL WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
+    TITLE, AND NON-INFRINGEMENT.
+  </p>
+  <p>
+    WE DO NOT WARRANT THAT THE SERVICES WILL BE UNINTERRUPTED, ERROR-FREE, OR SECURE, OR THAT ANY OUTCOME OR BENEFIT WILL RESULT FROM USE OF THE SERVICES.
+  </p>
+
+  <h2>16) Limitation of Liability</h2>
+  <p>
+    TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT WILL THE COMPANY OR ITS OFFICERS, DIRECTORS, EMPLOYEES, CONTRACTORS, AFFILIATES,
+    LICENSORS, OR AGENTS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, DATA, USE,
+    GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR RELATED TO YOUR USE OF (OR INABILITY TO USE) THE SERVICES OR CONTENT.
+  </p>
+  <p>
+    TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE COMPANY’S TOTAL LIABILITY FOR ALL CLAIMS ARISING OUT OF OR RELATED TO THESE TERMS OR THE SERVICES
+    WILL NOT EXCEED THE GREATER OF: (A) THE AMOUNT YOU PAID TO THE COMPANY FOR THE SERVICES IN THE 12 MONTHS BEFORE THE EVENT GIVING RISE TO THE CLAIM, OR
+    (B) US $100 (OR THE MINIMUM AMOUNT ALLOWED BY LAW WHERE YOU LIVE).
+  </p>
+  <p>
+    Some jurisdictions do not allow certain limitations, so parts of this section may not apply to you.
+  </p>
+
+  <h2>17) Indemnification</h2>
+  <p>
+    To the maximum extent permitted by law, you agree to defend, indemnify, and hold harmless the Company and its affiliates, officers, directors, employees,
+    contractors, agents, and licensors from and against any claims, liabilities, damages, losses, and expenses (including reasonable attorneys’ fees)
+    arising out of or related to: (a) your use of the Services, (b) your violation of these Terms, or (c) your violation of any applicable law or third-party rights.
+  </p>
+
+  <h2>18) Release (Where Allowed)</h2>
+  <p>
+    To the maximum extent permitted by law, you release the Company and its affiliates from any and all claims arising out of or related to your use of the Services.
+    If you are a California resident, you may be asked to waive California Civil Code §1542 in a separate acknowledgement where appropriate.
+  </p>
+
+  <h2>19) Dispute Resolution; Arbitration; Class Action Waiver (Optional / Jurisdiction-Dependent)</h2>
+  <div class="callout">
+    <p><strong>Important:</strong> This section is optional and jurisdiction-dependent. Arbitration and class action waivers are not appropriate or enforceable in every country/state.
+      Have counsel tailor or remove this section to match where you operate.</p>
+  </div>
+
+  <h3>19.1 Informal Resolution First</h3>
+  <p>
+    Before filing a claim, you agree to contact us with a written notice describing the dispute and requested relief at:
+    <strong>[Legal Notice Email]</strong> and <strong>[Mailing Address]</strong>. We will attempt to resolve the dispute informally within 30 days.
+  </p>
+
+  <h3>19.2 Binding Arbitration</h3>
+  <p>
+    If not resolved informally, and to the extent permitted by law, any dispute arising out of or relating to these Terms or the Services will be resolved
+    by binding individual arbitration and not in court, except that either party may bring a claim in small claims court if eligible.
+  </p>
+  <p>
+    Arbitration will be administered by <strong>[AAA/JAMS/Other]</strong> under its applicable rules, and will take place in <strong>[County, State/Country]</strong>,
+    unless the parties agree otherwise.
+  </p>
+
+  <h3>19.3 Class Action Waiver</h3>
+  <p>
+    To the maximum extent permitted by law, you and the Company agree that disputes will be brought only in an individual capacity and not as a plaintiff
+    or class member in any purported class, collective, coordinated, or representative proceeding.
+  </p>
+
+  <h3>19.4 Opt-Out (If Offered)</h3>
+  <p>
+    You may opt out of arbitration by sending written notice within 30 days of first accepting these Terms to:
+    <strong>[Opt-Out Email/Mailing Address]</strong> including your name, email, and a statement that you wish to opt out.
+  </p>
+
+  <h2>20) Governing Law and Venue</h2>
+  <p>
+    These Terms are governed by the laws of <strong>[State/Country]</strong>, excluding conflict-of-law principles.
+    If arbitration does not apply, you agree that disputes will be brought in the courts located in <strong>[County, State/Country]</strong>,
+    and you consent to personal jurisdiction there.
+  </p>
+
+  <h2>21) App Store Provider Terms (Apple / iOS Addendum)</h2>
+  <p>If you downloaded the app from Apple’s App Store, you acknowledge and agree:</p>
+  <ul>
+    <li>These Terms are between you and the Company, not Apple.</li>
+    <li>Apple has no obligation to provide maintenance or support for the app.</li>
+    <li>The Company is responsible for addressing claims relating to the app, including product liability and compliance with legal requirements.</li>
+    <li>Apple and its subsidiaries are third-party beneficiaries of these Terms and may enforce them against you.</li>
+  </ul>
+
+  <h2>22) Miscellaneous</h2>
+  <ul>
+    <li><strong>Severability:</strong> If any provision is unenforceable, the remaining provisions remain in effect.</li>
+    <li><strong>No Waiver:</strong> Failure to enforce any provision is not a waiver.</li>
+    <li><strong>Assignment:</strong> You may not assign these Terms without our consent; we may assign them as part of a merger, acquisition, or asset sale.</li>
+    <li><strong>Entire Agreement:</strong> These Terms and the Privacy Policy are the entire agreement regarding the Services.</li>
+  </ul>
+
+  <h2>23) Contact</h2>
+  <p>
+    <strong>[Company Legal Name]</strong><br />
+    <strong>Address:</strong> [Company Address]<br />
+    <strong>Support:</strong> <a href="mailto:[support@yourdomain.com]">[support@yourdomain.com]</a><br />
+    <strong>Legal/Privacy:</strong> <a href="mailto:[privacy@yourdomain.com]">[privacy@yourdomain.com]</a>
+  </p>
+
+    <hr />
+    <p class="meta">© [Year] [Company Legal Name]. All rights reserved.</p>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 Neurotype. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="/terms-of-service.html">Terms of Service</a>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/consumer-health-data-privacy-policy.html">Consumer Health Data Privacy Policy</a>
+      </div>
     </div>
-
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Neurotype. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="/terms-of-service.html">Terms of Service</a>
-                <a href="/privacy-policy.html">Privacy Policy</a>
-                <a href="/consumer-health-data-privacy-policy.html">Consumer Health Data Privacy Policy</a>
-            </div>
-        </div>
-    </footer>
+  </footer>
 </body>
 </html>
-

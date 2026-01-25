@@ -1,330 +1,469 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Consumer Health Data Privacy Policy for Neurotype">
-    <title>Consumer Health Data Privacy Policy - Neurotype</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --text-primary: #ffffff;
-            --text-secondary: rgba(255, 255, 255, 0.9);
-            --text-muted: rgba(255, 255, 255, 0.7);
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: var(--primary-gradient);
-            color: var(--text-primary);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        
-        /* Navigation */
-        nav {
-            padding: 1.5rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            text-decoration: none;
-            color: var(--text-primary);
-        }
-        
-        .logo-icon {
-            font-size: 2rem;
-        }
-        
-        /* Content Container */
-        .content-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            margin-top: 2rem;
-            margin-bottom: 4rem;
-        }
-        
-        h1 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 800;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-        
-        .last-updated {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-bottom: 2rem;
-        }
-        
-        h2 {
-            font-size: clamp(1.5rem, 3vw, 2rem);
-            font-weight: 700;
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-        }
-        
-        h3 {
-            font-size: clamp(1.2rem, 2vw, 1.5rem);
-            font-weight: 600;
-            margin-top: 1.5rem;
-            margin-bottom: 0.75rem;
-            color: var(--text-secondary);
-        }
-        
-        p {
-            margin-bottom: 1rem;
-            color: var(--text-secondary);
-            line-height: 1.8;
-        }
-        
-        ul, ol {
-            margin-left: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--text-secondary);
-        }
-        
-        li {
-            margin-bottom: 0.5rem;
-            line-height: 1.8;
-        }
-        
-        /* Footer */
-        footer {
-            padding: 3rem 2rem;
-            text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            margin-top: 4rem;
-        }
-        
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            color: var(--text-muted);
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-        }
-        
-        .footer-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-links a:hover {
-            color: var(--text-primary);
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            nav {
-                padding: 1rem;
-            }
-            
-            .content-container {
-                padding: 1.5rem;
-                margin: 1rem;
-                border-radius: 15px;
-            }
-            
-            h1 {
-                font-size: 1.75rem;
-            }
-            
-            h2 {
-                font-size: 1.5rem;
-            }
-            
-            h3 {
-                font-size: 1.2rem;
-            }
-            
-            .footer-links {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Consumer Health Data Privacy Policy for Neurotype">
+  <title>Neurotype Consumer Health Data Privacy Policy</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    :root {
+      --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --text-primary: #ffffff;
+      --text-secondary: rgba(255, 255, 255, 0.9);
+      --text-muted: rgba(255, 255, 255, 0.7);
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: var(--primary-gradient);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+    
+    /* Navigation */
+    nav {
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+    
+    .logo-icon {
+      font-size: 2rem;
+    }
+    
+    /* Content Container */
+    .content-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+    }
+    
+    h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+      color: var(--text-primary);
+    }
+    
+    .meta {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+      line-height: 1.25;
+    }
+    
+    h3 {
+      font-size: clamp(1.2rem, 2vw, 1.5rem);
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: var(--text-secondary);
+      line-height: 1.25;
+    }
+    
+    p {
+      margin-bottom: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      font-size: clamp(0.95rem, 1.5vw, 1rem);
+    }
+    
+    ul, ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+    
+    li {
+      margin-bottom: 0.5rem;
+      line-height: 1.8;
+      font-size: clamp(0.95rem, 1.5vw, 1rem);
+    }
+    
+    .callout {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 1.25rem 1.5rem;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      margin: 1.5rem 0;
+      backdrop-filter: blur(5px);
+    }
+    
+    .callout p {
+      margin-bottom: 0.75rem;
+    }
+    
+    .callout ul {
+      margin-top: 0.5rem;
+    }
+    
+    code {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+    
+    hr {
+      margin: 2rem 0;
+      border: none;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    a {
+      color: var(--text-primary);
+      text-decoration: underline;
+      transition: opacity 0.3s ease;
+    }
+    
+    a:hover {
+      opacity: 0.8;
+    }
+    
+    strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+    
+    /* Footer */
+    footer {
+      padding: 3rem 2rem;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 4rem;
+    }
+    
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      color: var(--text-muted);
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+    
+    .footer-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-links a:hover {
+      color: var(--text-primary);
+      text-decoration: underline;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        padding: 1rem;
+      }
+      
+      .content-container {
+        padding: 1.5rem;
+        margin: 1rem;
+        border-radius: 15px;
+        margin-top: 1rem;
+      }
+      
+      h1 {
+        font-size: 1.75rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+      }
+      
+      h3 {
+        font-size: 1.2rem;
+      }
+      
+      p, li {
+        font-size: 0.95rem;
+      }
+      
+      ul, ol {
+        margin-left: 1.25rem;
+      }
+      
+      .callout {
+        padding: 1rem;
+      }
+      
+      .footer-links {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      
+      .meta {
+        font-size: 0.85rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .content-container {
+        padding: 1.25rem;
+        margin: 0.75rem;
+      }
+      
+      h1 {
+        font-size: 1.5rem;
+      }
+      
+      h2 {
+        font-size: 1.3rem;
+      }
+      
+      h3 {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <a href="/" class="logo">
-            <span class="logo-icon">🧠</span>
-            <span>Neurotype</span>
-        </a>
-    </nav>
+  <nav>
+    <a href="/" class="logo">
+      <span class="logo-icon">🧠</span>
+      <span>Neurotype</span>
+    </a>
+  </nav>
 
-    <div class="content-container">
-        <h1>Consumer Health Data Privacy Policy</h1>
-        <p class="last-updated">Last Updated: [Date]</p>
-        
-        <p>
-            This Consumer Health Data Privacy Policy supplements our general Privacy Policy and 
-            specifically addresses how Neurotype collects, uses, and shares consumer health data 
-            as defined under applicable state privacy laws, including the Washington My Health My 
-            Data Act and similar legislation.
-        </p>
-        
-        <h2>1. What is Consumer Health Data?</h2>
-        <p>
-            Consumer health data includes information that identifies or could reasonably be 
-            associated with your past, present, or future physical or mental health status. 
-            This includes:
-        </p>
-        <ul>
-            <li>Cognitive assessment results and responses</li>
-            <li>Mental health and wellness information</li>
-            <li>Information about your cognitive patterns and brain function</li>
-            <li>Health-related preferences and goals</li>
-            <li>Any other information that relates to your health status</li>
-        </ul>
-        
-        <h2>2. Categories of Consumer Health Data We Collect</h2>
-        <p>We may collect the following categories of consumer health data:</p>
-        <ul>
-            <li><strong>Cognitive Assessment Data:</strong> Your responses to cognitive assessments, 
-            test results, and cognitive profile information</li>
-            <li><strong>Mental Health Information:</strong> Information related to your mental 
-            wellness, cognitive patterns, and psychological characteristics</li>
-            <li><strong>Health-Related Preferences:</strong> Your goals, preferences, and 
-            interests related to cognitive optimization and mental wellness</li>
-            <li><strong>Usage Patterns:</strong> Information about how you interact with health-related 
-            features of our Service</li>
-        </ul>
-        
-        <h2>3. Sources of Consumer Health Data</h2>
-        <p>We collect consumer health data from the following sources:</p>
-        <ul>
-            <li>Directly from you when you use our Service, complete assessments, or provide 
-            information in your profile</li>
-            <li>Automatically when you interact with health-related features of our Service</li>
-            <li>From third-party services you connect to our Service (with your explicit consent)</li>
-        </ul>
-        
-        <h2>4. How We Use Consumer Health Data</h2>
-        <p>We use consumer health data to:</p>
-        <ul>
-            <li>Generate your cognitive profile and personalized insights</li>
-            <li>Provide recommendations for optimizing your cognitive performance and daily life</li>
-            <li>Improve and personalize your experience with our Service</li>
-            <li>Develop and enhance our cognitive assessment tools</li>
-            <li>Conduct research and analytics (in anonymized and aggregated form)</li>
-            <li>Comply with legal obligations</li>
-        </ul>
-        
-        <h2>5. Sharing of Consumer Health Data</h2>
-        <p>We do not sell consumer health data. We may share consumer health data only in the 
-        following circumstances:</p>
-        <ul>
-            <li><strong>With Your Explicit Consent:</strong> We will only share your consumer health 
-            data with third parties when you have provided explicit, opt-in consent for such sharing</li>
-            <li><strong>Service Providers:</strong> With trusted service providers who assist us in 
-            operating our Service, subject to strict confidentiality obligations</li>
-            <li><strong>Legal Requirements:</strong> When required by law, court order, or 
-            government regulation</li>
-            <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, or 
-            sale of assets, with notice to affected consumers</li>
-            <li><strong>To Protect Rights:</strong> To protect our rights, property, or safety, or 
-            that of our users or others</li>
-        </ul>
-        
-        <h2>6. Your Rights Regarding Consumer Health Data</h2>
-        <p>You have the following rights with respect to your consumer health data:</p>
-        <ul>
-            <li><strong>Right to Know:</strong> Request information about the consumer health data 
-            we collect, use, and share</li>
-            <li><strong>Right to Access:</strong> Request access to your consumer health data</li>
-            <li><strong>Right to Delete:</strong> Request deletion of your consumer health data</li>
-            <li><strong>Right to Withdraw Consent:</strong> Withdraw consent for the collection, 
-            use, or sharing of consumer health data</li>
-            <li><strong>Right to Correct:</strong> Request correction of inaccurate consumer health data</li>
-            <li><strong>Right to Non-Discrimination:</strong> Exercise your rights without 
-            discrimination</li>
-        </ul>
-        
-        <h2>7. How to Exercise Your Rights</h2>
-        <p>
-            To exercise any of your rights regarding consumer health data, please contact us at 
-            [Your Contact Email] or through the methods provided in our Service. We will respond 
-            to your request within the timeframes required by applicable law.
-        </p>
-        <p>
-            To verify your identity, we may require you to provide certain information or complete 
-            a verification process. This helps us ensure that we are providing your information 
-            only to you.
-        </p>
-        
-        <h2>8. Security of Consumer Health Data</h2>
-        <p>
-            We implement industry-standard security measures to protect your consumer health data, 
-            including encryption, access controls, and regular security assessments. However, no 
-            method of transmission or storage is completely secure.
-        </p>
-        
-        <h2>9. Retention of Consumer Health Data</h2>
-        <p>
-            We retain consumer health data only for as long as necessary to provide our Service, 
-            fulfill the purposes outlined in this policy, or as required by law. When you request 
-            deletion, we will delete your consumer health data in accordance with applicable law, 
-            except where we are required to retain it for legal purposes.
-        </p>
-        
-        <h2>10. Changes to This Policy</h2>
-        <p>
-            We may update this Consumer Health Data Privacy Policy from time to time. We will 
-            notify you of any material changes by posting the updated policy on this page and 
-            updating the "Last Updated" date. Your continued use of our Service after such changes 
-            constitutes acceptance of the updated policy.
-        </p>
-        
-        <h2>11. Contact Us</h2>
-        <p>
-            If you have questions, concerns, or wish to exercise your rights regarding consumer 
-            health data, please contact us at [Your Contact Email].
-        </p>
-        <p>
-            For general privacy questions, please refer to our 
-            <a href="/privacy-policy.html" style="color: var(--text-primary); text-decoration: underline;">Privacy Policy</a>.
-        </p>
+  <div class="content-container">
+  <h1>Neurotype Consumer Health Data Privacy Policy</h1>
+  <p class="meta"><strong>Effective Date:</strong> [Month Day, Year] &nbsp;&nbsp; <strong>Last Updated:</strong> [Month Day, Year]</p>
+
+  <p>
+    This Consumer Health Data Privacy Policy (“<strong>CHD Policy</strong>”) describes how <strong>[Company Legal Name]</strong> (“Neurotype,” “we,” “us,” or “our”)
+    collects, uses, and shares “Consumer Health Data” (or “sensitive health-related data”) through the Services, and how you can exercise your rights.
+  </p>
+
+  <div class="callout">
+    <p><strong>Why this notice exists:</strong> In some jurisdictions, certain mental health–related information (including wellness module selections and usage)
+      is treated as “consumer health data” or “sensitive data.” Neurotype provides personalized meditation and progress tracking, which may involve such data.</p>
+  </div>
+
+  <p>
+    This CHD Policy supplements the Neurotype Privacy Policy:
+    <a href="/privacy-policy.html" rel="noopener">Privacy Policy</a>.
+    If there is a conflict, this CHD Policy applies to Consumer Health Data where required by applicable law.
+  </p>
+
+  <h2>1) Contact</h2>
+  <p>
+    <strong>[Company Legal Name]</strong><br />
+    <strong>Address:</strong> [Company Address]<br />
+    <strong>Privacy Email:</strong> <a href="mailto:[privacy@yourdomain.com]">[privacy@yourdomain.com]</a>
+  </p>
+
+  <h2>2) Scope</h2>
+  <p>
+    This CHD Policy applies to Consumer Health Data we collect about you through the Services, especially where you are located in (or your data is collected in)
+    a jurisdiction that regulates consumer health data or sensitive health-related data (for example, certain U.S. states).
+  </p>
+
+  <h2>3) What is “Consumer Health Data”?</h2>
+  <p>
+    “Consumer Health Data” generally means personal information that is linked or reasonably linkable to you and that identifies
+    your past, present, or future physical or mental health status, or health-related interventions.
+    In Neurotype, this may include information that could imply mental wellbeing status based on how you use wellness-related modules.
+  </p>
+
+  <h2>4) Categories of Consumer Health Data We Collect</h2>
+  <p>Depending on how you use the Services, we may collect the following categories:</p>
+  <ul>
+    <li><strong>Wellness goals and module selections</strong> you choose (for example, selecting modules related to anxiety, stress, burnout, focus, etc.).</li>
+    <li><strong>Session history and progress data</strong> associated with those goals or modules (for example, sessions started/completed, time spent, streaks, and progress milestones).</li>
+    <li><strong>Inferences for personalization</strong> derived from use of the Services (for example, preferred duration or time of day), to recommend appropriate Content.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>What we do NOT collect (core experience):</strong></p>
+    <ul>
+      <li>No journaling / free-form diary entries</li>
+      <li>No community posts or social messaging</li>
+      <li>No wearable or health platform integrations</li>
+      <li>No third-party behavioral advertising in the app</li>
+    </ul>
+  </div>
+
+  <h2>5) Sources of Consumer Health Data</h2>
+  <ul>
+    <li><strong>From you:</strong> your selections of goals, preferences, and modules.</li>
+    <li><strong>From your use of the Services:</strong> session activity and progress tracking events generated when you play or complete sessions.</li>
+  </ul>
+
+  <h2>6) Purposes for Collecting and Using Consumer Health Data</h2>
+  <p>We collect and use Consumer Health Data to:</p>
+  <ul>
+    <li><strong>Provide the Services</strong> you request (deliver Content, enable personalization, and track progress).</li>
+    <li><strong>Personalize recommendations</strong> (suggest sessions and modules based on your goals and usage patterns).</li>
+    <li><strong>Maintain, secure, and improve</strong> the Services (debugging, reliability, and performance improvements).</li>
+    <li><strong>Prevent fraud and misuse</strong> and protect the safety and security of the Services.</li>
+    <li><strong>Comply with legal obligations</strong> and enforce our Terms where required.</li>
+  </ul>
+
+  <h2>7) When and How We Share Consumer Health Data</h2>
+  <p><strong>We do not sell Consumer Health Data.</strong></p>
+  <p><strong>We do not share Consumer Health Data for targeted advertising.</strong></p>
+
+  <h3>7.1 Sharing With Service Providers</h3>
+  <p>
+    We may share Consumer Health Data with service providers that process information on our behalf to operate the Services,
+    such as providers for:
+  </p>
+  <ul>
+    <li>Cloud hosting and data storage</li>
+    <li>Analytics and performance measurement</li>
+    <li>Crash reporting and debugging</li>
+    <li>Customer support tooling</li>
+    <li>Subscription and entitlement management</li>
+  </ul>
+  <p>
+    Service providers are permitted to use data only to provide services to us and must protect it under contractual obligations.
+  </p>
+
+  <h3>7.2 Legal, Safety, and Rights</h3>
+  <p>
+    We may disclose Consumer Health Data if we believe in good faith it is necessary to comply with law or legal process,
+    protect rights and safety, investigate fraud, or secure the Services.
+  </p>
+
+  <h3>7.3 Business Transfers</h3>
+  <p>
+    If we are involved in a merger, acquisition, financing, reorganization, bankruptcy, or sale of assets, Consumer Health Data may be transferred
+    as part of that transaction, subject to appropriate protections and as permitted by law.
+  </p>
+
+  <h3>7.4 Affiliates</h3>
+  <p>
+    <strong>[Choose one and delete the other:]</strong><br />
+    Option A: We do not share Consumer Health Data with corporate affiliates.<br />
+    Option B: We may share Consumer Health Data with the following affiliates: [List affiliate legal names]. Such sharing is limited to operating the Services and is subject to protections.
+  </p>
+
+  <h2>8) Consent (Where Required)</h2>
+  <p>
+    Some jurisdictions require affirmative consent before collecting or sharing Consumer Health Data.
+    Where required, we obtain consent through in-app notices and controls.
+  </p>
+  <p>
+    You may withdraw consent for future collection or sharing where processing is based on consent by:
+  </p>
+  <ul>
+    <li>Using in-app controls (if available): Settings → Privacy → [Manage Consents], or</li>
+    <li>Emailing us at <a href="mailto:[privacy@yourdomain.com]">[privacy@yourdomain.com]</a> with subject “Withdraw Consent.”</li>
+  </ul>
+
+  <h2>9) Your Consumer Health Data Rights (Where Applicable)</h2>
+  <p>
+    Depending on where you live, you may have rights to:
+  </p>
+  <ul>
+    <li><strong>Access / Confirm</strong> whether we collect or share Consumer Health Data about you and obtain a copy of it.</li>
+    <li><strong>Delete</strong> Consumer Health Data.</li>
+    <li><strong>Withdraw consent</strong> for future collection or sharing (where processing is based on consent).</li>
+    <li><strong>Appeal</strong> a decision if we deny your request (where required by law).</li>
+  </ul>
+
+  <h3>How to Submit a Request</h3>
+  <p>
+    Email <a href="mailto:[privacy@yourdomain.com]">[privacy@yourdomain.com]</a> with subject “Consumer Health Data Request.”
+    Include the email associated with your account and specify the request (access, deletion, withdraw consent).
+  </p>
+  <p>
+    We may need to verify your identity before completing your request. We will respond as required by applicable law.
+    If you want to appeal a decision, email us with subject “Appeal – Consumer Health Data.”
+  </p>
+
+  <h2>10) Data Retention</h2>
+  <p>
+    We retain Consumer Health Data only as long as reasonably necessary to provide the Services, maintain security, comply with legal obligations,
+    and resolve disputes. If you request deletion, we will delete or de-identify Consumer Health Data unless we must retain certain information
+    for legal, security, or fraud-prevention purposes. Residual copies may remain in backups for a limited period before being overwritten.
+  </p>
+
+  <h2>11) Data Security</h2>
+  <p>
+    We use reasonable administrative, technical, and organizational measures designed to protect Consumer Health Data.
+    However, no system can guarantee absolute security.
+  </p>
+
+  <h2>12) Geofencing</h2>
+  <p>
+    Neurotype does not use geofencing around in-person healthcare facilities to identify or track individuals, collect Consumer Health Data,
+    or send health-related notifications or advertisements.
+  </p>
+
+  <h2>13) Changes to This CHD Policy</h2>
+  <p>
+    We may update this CHD Policy from time to time. We will update the “Last Updated” date above and provide notice as required by law.
+  </p>
+
+  <h2>14) Contact</h2>
+  <p>
+    <strong>[Company Legal Name]</strong><br />
+    <strong>Address:</strong> [Company Address]<br />
+    <strong>Privacy:</strong> <a href="mailto:[privacy@yourdomain.com]">[privacy@yourdomain.com]</a>
+  </p>
+
+    <hr />
+    <p class="meta">© [Year] [Company Legal Name]. All rights reserved.</p>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 Neurotype. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="/terms-of-service.html">Terms of Service</a>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/consumer-health-data-privacy-policy.html">Consumer Health Data Privacy Policy</a>
+      </div>
     </div>
-
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Neurotype. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="/terms-of-service.html">Terms of Service</a>
-                <a href="/privacy-policy.html">Privacy Policy</a>
-                <a href="/consumer-health-data-privacy-policy.html">Consumer Health Data Privacy Policy</a>
-            </div>
-        </div>
-    </footer>
+  </footer>
 </body>
 </html>
-
