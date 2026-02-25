@@ -607,17 +607,41 @@
         .modules-stat-label { font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem; font-weight: 500; }
         .modules-stat-divider { width: 1px; background: var(--border); align-self: stretch; }
 
-        .module-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; max-width: 720px; margin: 0 auto; }
+        .module-categories {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 1rem; max-width: 720px; margin: 0 auto; text-align: left;
+        }
+        .module-category {
+            background: var(--bg-system); border-radius: 14px; padding: 1rem 1.25rem;
+        }
+        .module-cat-label {
+            display: flex; align-items: center; gap: 0.4rem;
+            font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.08em;
+            text-transform: uppercase; margin-bottom: 0.625rem;
+        }
+        .module-cat-dot {
+            width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+        }
+        .module-cat-pills { display: flex; flex-wrap: wrap; gap: 0.375rem; }
         .module-pill {
-            padding: 0.5rem 1.125rem; border-radius: 100px;
+            padding: 0.375rem 0.875rem; border-radius: 100px;
             font-size: 0.8125rem; font-weight: 600;
             border: 1px solid var(--border); background: var(--bg-card);
             color: var(--text-primary); transition: all 0.25s var(--ease-smooth); cursor: default;
         }
-        .module-pill:hover { background: var(--accent-light); border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
-        .module-pill.featured { background: var(--accent-light); border-color: rgba(42,157,143,0.3); color: var(--accent); }
+        .module-pill:hover { transform: translateY(-2px); }
 
-        @media (max-width: 480px) { .modules-stats { flex-direction: column; gap: 1rem; align-items: center; } .modules-stat-divider { width: 40px; height: 1px; } }
+        /* Category color accents on hover */
+        .module-category.disorder .module-pill:hover { border-color: #FF6B6B; color: #FF6B6B; background: rgba(255,107,107,0.06); }
+        .module-category.wellness .module-pill:hover { border-color: #6BCB77; color: #6BCB77; background: rgba(107,203,119,0.06); }
+        .module-category.skill .module-pill:hover { border-color: #5B8DEE; color: #5B8DEE; background: rgba(91,141,238,0.06); }
+        .module-category.winddown .module-pill:hover { border-color: #B8A9E8; color: #B8A9E8; background: rgba(184,169,232,0.06); }
+
+        @media (max-width: 480px) {
+            .modules-stats { flex-direction: column; gap: 1rem; align-items: center; }
+            .modules-stat-divider { width: 40px; height: 1px; }
+            .module-categories { grid-template-columns: 1fr; }
+        }
 
         /* =============================================
            EVIDENCE / CREDIBILITY
@@ -983,38 +1007,69 @@
         <div class="container modules-inner">
             <p class="section-label reveal">What's Inside</p>
             <h2 class="reveal reveal-d1">Every session built for a reason.</h2>
-            <p class="modules-sub reveal reveal-d2">12 specialized profiles. 217+ evidence-informed sessions. Clinical-grade transparency.</p>
+            <p class="modules-sub reveal reveal-d2">11 modules across 4 categories. 198 evidence-informed sessions. Clinical-grade transparency.</p>
 
             <div class="modules-stats reveal reveal-d2">
                 <div class="modules-stat">
-                    <div class="modules-stat-number"><span class="counter" data-target="217">0</span><span class="acc">+</span></div>
+                    <div class="modules-stat-number"><span class="counter" data-target="198">0</span></div>
                     <div class="modules-stat-label">Guided sessions</div>
                 </div>
                 <div class="modules-stat-divider"></div>
                 <div class="modules-stat">
-                    <div class="modules-stat-number"><span class="counter" data-target="12">0</span></div>
-                    <div class="modules-stat-label">Mental health profiles</div>
+                    <div class="modules-stat-number"><span class="counter" data-target="11">0</span></div>
+                    <div class="modules-stat-label">Modules</div>
                 </div>
                 <div class="modules-stat-divider"></div>
                 <div class="modules-stat">
-                    <div class="modules-stat-number">Clinical<span class="acc">-</span>grade</div>
-                    <div class="modules-stat-label">Transparent &amp; measurable</div>
+                    <div class="modules-stat-number"><span class="counter" data-target="4">0</span></div>
+                    <div class="modules-stat-label">Categories</div>
                 </div>
             </div>
 
-            <div class="module-pills reveal reveal-d3">
-                <span class="module-pill featured">ADHD</span>
-                <span class="module-pill featured">PTSD</span>
-                <span class="module-pill featured">Depression</span>
-                <span class="module-pill featured">Panic Disorder</span>
-                <span class="module-pill">Generalized Anxiety</span>
-                <span class="module-pill">OCD</span>
-                <span class="module-pill">Social Anxiety</span>
-                <span class="module-pill">Insomnia</span>
-                <span class="module-pill">Chronic Stress</span>
-                <span class="module-pill">Bipolar Support</span>
-                <span class="module-pill">Trauma Recovery</span>
-                <span class="module-pill">Emotional Regulation</span>
+            <div class="module-categories reveal reveal-d3">
+                <div class="module-category disorder">
+                    <div class="module-cat-label">
+                        <div class="module-cat-dot" style="background:#FF6B6B"></div>
+                        Disorder
+                    </div>
+                    <div class="module-cat-pills">
+                        <span class="module-pill">Anxiety</span>
+                        <span class="module-pill">Panic Disorder</span>
+                        <span class="module-pill">Depression</span>
+                        <span class="module-pill">ADHD</span>
+                    </div>
+                </div>
+                <div class="module-category wellness">
+                    <div class="module-cat-label">
+                        <div class="module-cat-dot" style="background:#6BCB77"></div>
+                        Wellness
+                    </div>
+                    <div class="module-cat-pills">
+                        <span class="module-pill">Burnout</span>
+                        <span class="module-pill">Self-Compassion</span>
+                        <span class="module-pill">Stress Relief</span>
+                    </div>
+                </div>
+                <div class="module-category skill">
+                    <div class="module-cat-label">
+                        <div class="module-cat-dot" style="background:#5B8DEE"></div>
+                        Skill
+                    </div>
+                    <div class="module-cat-pills">
+                        <span class="module-pill">Focus</span>
+                        <span class="module-pill">Addiction</span>
+                        <span class="module-pill">Mindfulness</span>
+                    </div>
+                </div>
+                <div class="module-category winddown">
+                    <div class="module-cat-label">
+                        <div class="module-cat-dot" style="background:#B8A9E8"></div>
+                        Wind Down
+                    </div>
+                    <div class="module-cat-pills">
+                        <span class="module-pill">Sleep</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
