@@ -5,272 +5,277 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Privacy Policy for Neurotype">
   <title>Neurotype Privacy Policy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    
+
     :root {
-      --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      --text-primary: #ffffff;
-      --text-secondary: rgba(255, 255, 255, 0.9);
-      --text-muted: rgba(255, 255, 255, 0.7);
+      --bg-system: #F2F2F7;
+      --bg-card: #FFFFFF;
+      --bg-dark: #0C1117;
+      --accent: #2A9D8F;
+      --accent-hover: #238377;
+      --accent-light: #E6F5F2;
+      --accent-muted: rgba(42,157,143,0.12);
+      --text-primary: #1C1C1E;
+      --text-secondary: #636366;
+      --text-tertiary: #AEAEB2;
+      --text-on-dark: #F2F2F7;
+      --text-on-dark-muted: #8E8E93;
+      --border: #E5E5EA;
+      --border-dark: #2C2C2E;
+      --shadow-card: 0 2px 16px rgba(0,0,0,0.06);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,0.1);
+      --container: 1120px;
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
     }
-    
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-      background: var(--primary-gradient);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: var(--bg-system);
       color: var(--text-primary);
       line-height: 1.6;
       overflow-x: hidden;
       min-height: 100vh;
     }
-    
-    /* Navigation */
-    nav {
-      padding: 1.5rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
+
+    .container {
+      max-width: var(--container);
       margin: 0 auto;
+      padding: 0 2rem;
     }
-    
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 700;
+
+    /* Navigation */
+    .legal-nav {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg-card);
+    }
+
+    .nav-logo {
       display: flex;
       align-items: center;
       gap: 0.5rem;
       text-decoration: none;
+      font-weight: 800;
+      font-size: 1.25rem;
       color: var(--text-primary);
     }
-    
-    .logo-icon {
-      font-size: 2rem;
+
+    .nav-logo svg {
+      width: 26px;
+      height: 26px;
     }
-    
+
     /* Content Container */
     .content-container {
       max-width: 900px;
-      margin: 0 auto;
-      padding: 2.5rem;
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
+      margin: 2.5rem auto;
+      padding: 3rem;
+      background: var(--bg-card);
       border-radius: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      margin-top: 2rem;
-      margin-bottom: 4rem;
+      box-shadow: var(--shadow-card);
     }
-    
+
     h1 {
+      font-family: 'Instrument Serif', serif;
       font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 800;
+      font-weight: 400;
       margin-bottom: 1rem;
       line-height: 1.2;
       color: var(--text-primary);
     }
-    
+
     .meta {
-      color: var(--text-muted);
+      color: var(--text-secondary);
       font-size: 0.9rem;
       margin-bottom: 2rem;
       padding-bottom: 1.5rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid var(--border);
     }
-    
+
     h2 {
-      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(1.5rem, 3vw, 1.75rem);
       font-weight: 700;
       margin-top: 2.5rem;
       margin-bottom: 1rem;
       color: var(--text-primary);
       line-height: 1.25;
     }
-    
+
     h3 {
-      font-size: clamp(1.2rem, 2vw, 1.5rem);
-      font-weight: 600;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(1.1rem, 2vw, 1.3rem);
+      font-weight: 700;
       margin-top: 1.5rem;
       margin-bottom: 0.75rem;
-      color: var(--text-secondary);
+      color: var(--text-primary);
       line-height: 1.25;
     }
-    
+
     p {
       margin-bottom: 1rem;
       color: var(--text-secondary);
       line-height: 1.8;
       font-size: clamp(0.95rem, 1.5vw, 1rem);
     }
-    
+
     ul, ol {
       margin-left: 1.5rem;
       margin-bottom: 1rem;
       color: var(--text-secondary);
       line-height: 1.8;
     }
-    
+
     li {
       margin-bottom: 0.5rem;
       line-height: 1.8;
       font-size: clamp(0.95rem, 1.5vw, 1rem);
     }
-    
+
     .callout {
-      background: rgba(255, 255, 255, 0.15);
+      background: var(--accent-muted);
       padding: 1.25rem 1.5rem;
       border-radius: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-left: 4px solid var(--accent);
       margin: 1.5rem 0;
-      backdrop-filter: blur(5px);
     }
-    
+
     .callout p {
       margin-bottom: 0.75rem;
     }
-    
+
     .callout ul {
       margin-top: 0.5rem;
     }
-    
+
     code {
-      background: rgba(255, 255, 255, 0.2);
+      background: var(--accent-muted);
       padding: 2px 6px;
       border-radius: 4px;
       font-size: 0.9em;
     }
-    
+
     hr {
       margin: 2rem 0;
       border: none;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-top: 1px solid var(--border);
     }
-    
+
     a {
-      color: var(--text-primary);
+      color: var(--accent);
       text-decoration: underline;
-      transition: opacity 0.3s ease;
+      transition: color 0.3s var(--ease-smooth);
     }
-    
+
     a:hover {
-      opacity: 0.8;
+      color: var(--accent-hover);
     }
-    
+
     strong {
       color: var(--text-primary);
       font-weight: 600;
     }
-    
+
     /* Footer */
-    footer {
-      padding: 3rem 2rem;
-      text-align: center;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      margin-top: 4rem;
-    }
-    
-    .footer-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      color: var(--text-muted);
-    }
-    
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-      margin-top: 1.5rem;
-    }
-    
-    .footer-links a {
-      color: var(--text-secondary);
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    
-    .footer-links a:hover {
-      color: var(--text-primary);
-      text-decoration: underline;
-    }
-    
+    .footer { padding: 3rem 0 1.5rem; background: var(--bg-dark); }
+    .footer-inner { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
+    .footer-logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; font-weight: 800; font-size: 1.125rem; color: var(--text-on-dark); }
+    .footer-logo svg { width: 22px; height: 22px; }
+    .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
+    .footer-links a { font-size: 0.8125rem; color: var(--text-on-dark-muted); text-decoration: none; transition: color 0.3s; }
+    .footer-links a:hover { color: var(--text-on-dark); }
+    .footer-contact { font-size: 0.8125rem; color: var(--text-on-dark-muted); }
+    .footer-contact a { color: var(--accent); text-decoration: none; }
+    .footer-bottom { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-dark); text-align: center; }
+    .footer-bottom p { font-size: 0.75rem; color: var(--text-on-dark-muted); }
+
     /* Responsive */
     @media (max-width: 768px) {
-      nav {
-        padding: 1rem;
+      .container {
+        padding: 0 1rem;
       }
-      
+
       .content-container {
-        padding: 1.5rem;
-        margin: 1rem;
-        border-radius: 15px;
-        margin-top: 1rem;
+        padding: 2rem 1.5rem;
+        margin: 1.5rem 1rem;
+        border-radius: 16px;
       }
-      
+
       h1 {
         font-size: 1.75rem;
       }
-      
+
       h2 {
-        font-size: 1.5rem;
+        font-size: 1.35rem;
         margin-top: 2rem;
       }
-      
+
       h3 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
-      
+
       p, li {
         font-size: 0.95rem;
       }
-      
+
       ul, ol {
         margin-left: 1.25rem;
       }
-      
+
       .callout {
-        padding: 1rem;
+        padding: 1rem 1.25rem;
       }
-      
-      .footer-links {
-        flex-direction: column;
-        gap: 0.75rem;
-      }
-      
+
       .meta {
         font-size: 0.85rem;
       }
     }
-    
+
+    @media (max-width: 600px) {
+      .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+      }
+    }
+
     @media (max-width: 480px) {
       .content-container {
-        padding: 1.25rem;
-        margin: 0.75rem;
+        padding: 1.5rem 1.25rem;
+        margin: 1rem 0.75rem;
       }
-      
+
       h1 {
         font-size: 1.5rem;
       }
-      
+
       h2 {
-        font-size: 1.3rem;
+        font-size: 1.25rem;
       }
-      
+
       h3 {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
       }
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="/" class="logo">
-      <span class="logo-icon">🧠</span>
-      <span>Neurotype</span>
-    </a>
+  <nav class="legal-nav">
+    <div class="container">
+      <a href="/" class="nav-logo">
+        <svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="12" stroke="currentColor" stroke-width="1.5" opacity="0.3"/><circle cx="13" cy="13" r="7" stroke="currentColor" stroke-width="1.5" opacity="0.5"/><circle cx="13" cy="13" r="2.5" fill="currentColor"/></svg>
+        Neurotype
+      </a>
+    </div>
   </nav>
 
   <div class="content-container">
@@ -278,8 +283,8 @@
   <p class="meta"><strong>Effective Date:</strong> Jan 25 2026 &nbsp;&nbsp; <strong>Last Updated:</strong> Jan 25 2026</p>
 
   <p>
-    This Privacy Policy explains how <strong>LaunchSpace LLC</strong> (“<strong>Neurotype</strong>,” “we,” “us,” or “our”) collects, uses, and shares
-    information when you use the Neurotype mobile application and related services (collectively, the “<strong>Services</strong>”).
+    This Privacy Policy explains how <strong>LaunchSpace LLC</strong> ("<strong>Neurotype</strong>," "we," "us," or "our") collects, uses, and shares
+    information when you use the Neurotype mobile application and related services (collectively, the "<strong>Services</strong>").
   </p>
 
   <div class="callout">
@@ -348,7 +353,7 @@
 
   <h3>A. Service Providers</h3>
   <p>
-    We use third-party vendors (“service providers”) to help run the Services. They may process information on our behalf for:
+    We use third-party vendors ("service providers") to help run the Services. They may process information on our behalf for:
   </p>
   <ul>
     <li>Cloud hosting and data storage</li>
@@ -395,7 +400,7 @@
   </p>
   <p>
     <strong>How to exercise rights:</strong><br />
-    Email us at <a href="mailto:contact@launchspace.org">contact@launchspace.org</a> with the subject line “Privacy Request.”<br />
+    Email us at <a href="mailto:contact@launchspace.org">contact@launchspace.org</a> with the subject line "Privacy Request."<br />
     If available in the app: Settings → Clear Data → Reset Account / Delete Account
   </p>
   <p>
@@ -419,7 +424,7 @@
     and we cannot guarantee absolute security.
   </p>
 
-  <h2>10) Children’s Privacy</h2>
+  <h2>10) Children's Privacy</h2>
   <p>
     The Services are not intended for children under 13 (or the minimum age required in your jurisdiction). We do not knowingly collect personal information from children.
     If you believe a child has provided personal information, contact <a href="mailto:contact@launchspace.org">contact@launchspace.org</a>.
@@ -427,12 +432,12 @@
 
   <h2>11) Changes to This Privacy Policy</h2>
   <p>
-    We may update this Privacy Policy from time to time. We will update the “Last Updated” date above. If changes are material, we will provide additional notice as required by law (e.g., in-app notice).
+    We may update this Privacy Policy from time to time. We will update the "Last Updated" date above. If changes are material, we will provide additional notice as required by law (e.g., in-app notice).
   </p>
 
   <h2>12) Appendix: Consumer Health / Sensitive Data Notice (Where Applicable)</h2>
   <p>
-    Some jurisdictions treat certain mental health–related information as “consumer health data” or “sensitive data.”
+    Some jurisdictions treat certain mental health–related information as "consumer health data" or "sensitive data."
     Neurotype may process data that could imply mental wellbeing status (for example, the wellness modules you choose and use).
   </p>
 
@@ -464,7 +469,7 @@
   <h3>E. Your Rights</h3>
   <p>
     Where required by law, you may have rights to access, delete, or withdraw consent for future processing of consumer health/sensitive data.
-    To exercise these rights, email <a href="mailto:contact@launchspace.org">contact@launchspace.org</a> with the subject line “Consumer Health Data Request.”
+    To exercise these rights, email <a href="mailto:contact@launchspace.org">contact@launchspace.org</a> with the subject line "Consumer Health Data Request."
   </p>
 
   <h3>F. Geofencing</h3>
@@ -479,14 +484,19 @@
     </p>
   </div>
 
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2024 Neurotype. All rights reserved.</p>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="/" class="footer-logo">
+        <svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="12" stroke="currentColor" stroke-width="1.5" opacity="0.3"/><circle cx="13" cy="13" r="7" stroke="currentColor" stroke-width="1.5" opacity="0.5"/><circle cx="13" cy="13" r="2.5" fill="currentColor"/></svg>
+        Neurotype
+      </a>
       <div class="footer-links">
         <a href="/terms-of-service.html">Terms of Service</a>
         <a href="/privacy-policy.html">Privacy Policy</a>
         <a href="/consumer-health-data-privacy-policy.html">Consumer Health Data Privacy Policy</a>
       </div>
+      <p class="footer-contact">Questions? <a href="mailto:contact@neurotypeapp.com">contact@neurotypeapp.com</a></p>
+      <div class="footer-bottom"><p>&copy; 2026 Neurotype. All rights reserved.</p></div>
     </div>
   </footer>
 </body>
