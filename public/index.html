@@ -571,8 +571,18 @@
            ============================================= */
         .modules { padding: var(--section-pad) 0; background: var(--bg-system); }
         .modules-inner { text-align: center; }
-        .modules h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 0.5rem; }
-        .modules-sub { font-size: clamp(0.875rem, 1.1vw, 1rem); color: var(--text-secondary); margin-bottom: 2rem; }
+        .modules-stats {
+            display: flex; justify-content: center; gap: clamp(1.5rem, 4vw, 3rem);
+            margin-bottom: 2rem;
+        }
+        .modules-stat { text-align: center; }
+        .modules-stat-number {
+            font-size: clamp(1.75rem, 3.5vw, 2.5rem); font-weight: 800;
+            color: var(--text-primary); line-height: 1; font-variant-numeric: tabular-nums;
+        }
+        .modules-stat-number .acc { color: var(--accent); }
+        .modules-stat-label { font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.25rem; font-weight: 500; }
+        .modules-stat-divider { width: 1px; background: var(--border); align-self: stretch; }
 
         .module-categories {
             display: grid; grid-template-columns: 1fr 1fr;
@@ -605,6 +615,8 @@
         .module-category.winddown .module-pill:hover { border-color: #B8A9E8; color: #B8A9E8; background: rgba(184,169,232,0.06); }
 
         @media (max-width: 480px) {
+            .modules-stats { flex-direction: column; gap: 1rem; align-items: center; }
+            .modules-stat-divider { width: 40px; height: 1px; }
             .module-categories { grid-template-columns: 1fr; }
         }
 
@@ -1075,11 +1087,24 @@
     <!-- MODULES -->
     <section class="modules" id="modules">
         <div class="container modules-inner">
-            <p class="section-label reveal">What's Inside</p>
-            <h2 class="reveal reveal-d1">198 sessions. 11 modules. One app.</h2>
-            <p class="modules-sub reveal reveal-d2">Every session built for a reason. Organized by what you're working on.</p>
+            <div class="modules-stats reveal reveal-d1">
+                <div class="modules-stat">
+                    <div class="modules-stat-number"><span class="counter" data-target="198">0</span><span class="acc">+</span></div>
+                    <div class="modules-stat-label">Guided Sessions</div>
+                </div>
+                <div class="modules-stat-divider"></div>
+                <div class="modules-stat">
+                    <div class="modules-stat-number"><span class="counter" data-target="11">0</span></div>
+                    <div class="modules-stat-label">Mental Health Modules</div>
+                </div>
+                <div class="modules-stat-divider"></div>
+                <div class="modules-stat">
+                    <div class="modules-stat-number">Clinical<span class="acc">-</span>grade</div>
+                    <div class="modules-stat-label">Transparent Approach</div>
+                </div>
+            </div>
 
-            <div class="module-categories reveal reveal-d3">
+            <div class="module-categories reveal reveal-d2">
                 <div class="module-category disorder">
                     <div class="module-cat-label">
                         <div class="module-cat-dot" style="background:#FF6B6B"></div>
