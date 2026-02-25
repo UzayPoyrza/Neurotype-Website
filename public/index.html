@@ -934,7 +934,7 @@
     <nav class="nav" id="nav">
         <div class="container nav-inner">
             <a href="#" class="nav-logo">
-                <img src="/icons/nav_logo.png" alt="Neurotype logo" width="38" height="38">
+                <img id="navLogoImg" src="/icons/nav_logo_light.png" alt="Neurotype logo" width="38" height="38">
                 Neurotype
             </a>
             <ul class="nav-links" id="navLinks">
@@ -1551,7 +1551,12 @@
 
         // Nav Scroll
         var nav = document.getElementById('nav');
-        function onScroll() { nav.classList.toggle('scrolled', (window.pageYOffset || document.documentElement.scrollTop) > 50); }
+        var navLogoImg = document.getElementById('navLogoImg');
+        function onScroll() {
+            var scrolled = (window.pageYOffset || document.documentElement.scrollTop) > 50;
+            nav.classList.toggle('scrolled', scrolled);
+            navLogoImg.src = scrolled ? '/icons/nav_logo.png' : '/icons/nav_logo_light.png';
+        }
         window.addEventListener('scroll', onScroll, { passive: true });
         onScroll();
 
