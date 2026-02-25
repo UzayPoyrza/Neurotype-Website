@@ -10,6 +10,13 @@
     <meta name="keywords" content="meditation app, personalized meditation, mental health, ADHD meditation, PTSD, anxiety, depression, neurodivergent, mindfulness, evidence-based">
     <link rel="canonical" href="https://www.neurotypeapp.com/">
 
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
     <!-- OpenGraph -->
     <meta property="og:title" content="Neurotype — Meditation, Prescribed for Your Brain">
     <meta property="og:description" content="The first meditation app that matches neuroscience-backed techniques to your mental health profile. 11 modules. 198+ sessions. Measurable progress.">
@@ -185,7 +192,7 @@
             color: var(--text-on-dark); transition: color 0.4s var(--ease-smooth);
         }
         .nav.scrolled .nav-logo { color: var(--text-primary); }
-        .nav-logo svg { width: 26px; height: 26px; }
+        .nav-logo img { width: 26px; height: 26px; object-fit: contain; }
         .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
         .nav-links a {
             text-decoration: none; font-size: 0.8125rem; font-weight: 600;
@@ -906,7 +913,7 @@
             display: flex; align-items: center; gap: 0.5rem;
             font-weight: 800; font-size: 1rem; color: var(--text-on-dark); text-decoration: none;
         }
-        .footer-logo svg { width: 22px; height: 22px; }
+        .footer-logo img { width: 22px; height: 22px; object-fit: contain; }
         .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
         .footer-links a { font-size: 0.8125rem; color: var(--text-on-dark-muted); text-decoration: none; transition: color 0.3s; }
         .footer-links a:hover { color: var(--text-on-dark); }
@@ -927,7 +934,7 @@
     <nav class="nav" id="nav">
         <div class="container nav-inner">
             <a href="#" class="nav-logo">
-                <svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="12" stroke="currentColor" stroke-width="1.5" opacity="0.3"/><circle cx="13" cy="13" r="7" stroke="currentColor" stroke-width="1.5" opacity="0.5"/><circle cx="13" cy="13" r="2.5" fill="currentColor"/></svg>
+                <img src="/icons/app_light_128.png" alt="Neurotype logo" width="26" height="26">
                 Neurotype
             </a>
             <ul class="nav-links" id="navLinks">
@@ -1500,7 +1507,7 @@
     <footer class="footer">
         <div class="container footer-inner">
             <a href="#" class="footer-logo">
-                <svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="12" stroke="currentColor" stroke-width="1.5" opacity="0.3"/><circle cx="13" cy="13" r="7" stroke="currentColor" stroke-width="1.5" opacity="0.5"/><circle cx="13" cy="13" r="2.5" fill="currentColor"/></svg>
+                <img src="/icons/app_dark_128.png" alt="Neurotype logo" width="22" height="22">
                 Neurotype
             </a>
             <div class="footer-links">
