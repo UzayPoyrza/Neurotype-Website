@@ -1315,21 +1315,28 @@
                         <input type="email" id="email" class="form-input" placeholder="you@example.com" required>
                     </div>
                     <div class="form-row">
-                        <label for="profile" class="form-label">Profile of interest <span style="font-weight:400;color:var(--text-tertiary)">(optional)</span></label>
+                        <label for="profile" class="form-label">Module of interest <span style="font-weight:400;color:var(--text-tertiary)">(optional)</span></label>
                         <select id="profile" class="form-select">
-                            <option value="">Select a profile&hellip;</option>
-                            <option value="adhd">ADHD</option>
-                            <option value="ptsd">PTSD</option>
-                            <option value="depression">Depression</option>
-                            <option value="panic">Panic Disorder</option>
-                            <option value="anxiety">Generalized Anxiety</option>
-                            <option value="ocd">OCD</option>
-                            <option value="social-anxiety">Social Anxiety</option>
-                            <option value="insomnia">Insomnia</option>
-                            <option value="stress">Chronic Stress</option>
-                            <option value="bipolar">Bipolar Support</option>
-                            <option value="trauma">Trauma Recovery</option>
-                            <option value="emotional-regulation">Emotional Regulation</option>
+                            <option value="">Select a module&hellip;</option>
+                            <optgroup label="Disorder">
+                                <option value="anxiety">Anxiety</option>
+                                <option value="panic">Panic Disorder</option>
+                                <option value="depression">Depression</option>
+                                <option value="adhd">ADHD</option>
+                            </optgroup>
+                            <optgroup label="Wellness">
+                                <option value="burnout">Burnout</option>
+                                <option value="self-compassion">Self-Compassion</option>
+                                <option value="stress-relief">Stress Relief</option>
+                            </optgroup>
+                            <optgroup label="Skill">
+                                <option value="focus">Focus</option>
+                                <option value="addiction">Addiction</option>
+                                <option value="mindfulness">Mindfulness</option>
+                            </optgroup>
+                            <optgroup label="Wind Down">
+                                <option value="sleep">Sleep</option>
+                            </optgroup>
                         </select>
                     </div>
                     <button type="button" class="form-submit" id="submitBtn">Join the Waitlist</button>
