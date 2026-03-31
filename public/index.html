@@ -1438,12 +1438,36 @@
 
         // Waitlist Form
         var btn = document.getElementById('submitBtn'), inp = document.getElementById('email'), fields = document.getElementById('formFields'), success = document.getElementById('formSuccess');
+        var SUPABASE_URL = 'https://mnzgikhxftjaozmziywl.supabase.co';
+        var SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1uemdpa2h4ZnRqYW96bXppeXdsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ0MDY2MDcsImV4cCI6MjA4OTk4MjYwN30.9oaJk6JGYWbE3P5NULUCR6DlG9KnaiweDB-kSxWRp6o';
         if (btn) {
             btn.addEventListener('click', function() {
                 var v = inp.value.trim();
                 if (!v || !v.includes('@') || !v.includes('.')) { inp.style.borderColor = 'var(--accent)'; inp.focus(); return; }
                 btn.textContent = 'Submitting...'; btn.disabled = true;
-                setTimeout(function() { fields.classList.add('hide'); success.classList.add('show'); }, 700);
+                var moduleSelect = document.getElementById('profile');
+                var body = { email: v };
+                if (moduleSelect && moduleSelect.value) body.module_of_interest = moduleSelect.value;
+                fetch(SUPABASE_URL + '/rest/v1/waitlist', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'apikey': SUPABASE_ANON_KEY,
+                        'Authorization': 'Bearer ' + SUPABASE_ANON_KEY,
+                        'Prefer': 'return=minimal'
+                    },
+                    body: JSON.stringify(body)
+                }).then(function(res) {
+                    if (res.ok) {
+                        fields.classList.add('hide'); success.classList.add('show');
+                    } else if (res.status === 409) {
+                        fields.classList.add('hide'); success.classList.add('show');
+                    } else {
+                        btn.textContent = 'Something went wrong. Try again.'; btn.disabled = false;
+                    }
+                }).catch(function() {
+                    btn.textContent = 'Something went wrong. Try again.'; btn.disabled = false;
+                });
             });
             inp.addEventListener('input', function() { inp.style.borderColor = ''; });
         }
